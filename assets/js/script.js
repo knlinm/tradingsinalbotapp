@@ -49,7 +49,7 @@ var currencyButtons = document.querySelectorAll(".currencies .button");
 
 for (let i = 0; i < currencyButtons.length; i++) {
     currencyButtons[i].addEventListener("click", function () {
-        if (currencyButtons[i].innerText == '🔒\nBitcoin') {
+        if (currencyButtons[i].classList.contains("locked-button")) {
             window.alert("Contact us")
         }
         else {
@@ -74,7 +74,7 @@ var timeButtons = document.querySelectorAll(".V1tGj-8vrk");
 
 for (let i = 0; i < timeButtons.length; i++) {
     timeButtons[i].addEventListener("click", function () {
-        if(this.innerText=='🔒\n30 min'||this.innerText=='🔒\n23 h'){
+        if (timeButtons[i].classList.contains("locked-button")) {
             window.alert("Contact us")
         }
         else{
