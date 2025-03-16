@@ -21,6 +21,7 @@ for (let i = 0; i < currencyButtons.length; i++) {
             }
             document.querySelector("button.play").innerHTML = "Start"
             document.getElementsByClassName("rate")[0].innerHTML = "Select";
+            document.querySelector(".tntCount").style.background="#ccd016"
         }
     })
 }
@@ -39,6 +40,7 @@ for (let i = 0; i < timeButtons.length; i++) {
             document.querySelector("button.play").style.opacity = 1;
             if (document.querySelector("button.play").innerHTML == "Reset"){
                 document.getElementsByClassName("rate")[0].innerHTML = "Select";
+                document.querySelector(".tntCount").style.background="#ccd016"
                 document.querySelector("button.play").innerHTML = "Start"
                 document.querySelector("button.play").classList.remove("selected")
             }
@@ -71,6 +73,7 @@ document.querySelector("button.play").addEventListener("click", function () {
     }
     else if (document.querySelector("button.play").innerHTML == "Reset") {
         document.getElementsByClassName("rate")[0].innerHTML = "Select";
+        document.querySelector(".tntCount").style.background="#ccd016"
         document.body.style.background = "#000";
         var allButtons = document.querySelectorAll("button.selected");
         for (let index = 0; index < allButtons.length; index++) {
