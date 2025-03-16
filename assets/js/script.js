@@ -1,55 +1,10 @@
 document.querySelector(".social").addEventListener("click", function () {
-    window.location.href = "https://t.me/username";
+    window.location.href = "https://t.me/aksoyofficial";
 })
-
-// document.querySelector(".tntCount").addEventListener("click", function () {
-//     if (document.querySelector(".tntCount img").classList.contains("1")) {
-//         document.querySelector(".tntCount img").src = src = "assets/img/2-removebg-preview.png"
-//         document.querySelector(".tntCount img").classList.remove("1")
-//         document.querySelector(".tntCount img").classList.add("2")
-//     }
-//     else if (document.querySelector(".tntCount img").classList.contains("2")) {
-//         document.querySelector(".tntCount img").src = src = "assets/img/1-removebg-preview.png"
-//         document.querySelector(".tntCount img").classList.remove("2")
-//         document.querySelector(".tntCount img").classList.add("1")
-//     }
-
-// })
-// document.querySelector(".buttonWrapper").addEventListener("click", function () {
-//     if (document.querySelector("p.counter").innerText == "Start") {
-//         document.getElementsByClassName("loader")[0].classList.remove("hidden")
-//         document.getElementsByClassName("rate")[0].classList.add("hidden")
-
-//         setTimeout(() => {
-//             document.getElementsByClassName("loader")[0].classList.add("hidden");
-//             document.getElementsByClassName("rate")[0].classList.remove("hidden");
-//             document.getElementsByClassName("rate")[0].innerHTML=(Math.floor(Math.random() * 600) + 100)/100+"x";
-//         }, 500);
-//         document.querySelector("p.counter").innerText = "Reset"
-//         var timer = 15
-//         var myTimer = setInterval(() => {
-//             timer--
-//             if (timer >= 10) {
-//                 document.querySelector("p.counter").innerText = "00:" + timer + ""
-//             }
-//             else {
-//                 document.querySelector("p.counter").innerText = "00:0" + timer + ""
-
-//             }
-//             if (timer == 0) {
-//                 document.querySelector("p.counter").innerText = "Start"
-//                 clearInterval(myTimer)
-//             }
-//         }, 1000);
-//     }
-
-// })
-
 var currencyButtons = document.querySelectorAll(".currencies .button");
-
 for (let i = 0; i < currencyButtons.length; i++) {
     currencyButtons[i].addEventListener("click", function () {
-        if (currencyButtons[i].innerText == '🔒\nBitcoin') {
+        if (currencyButtons[i].classList.contains("locked-button")) {
             window.alert("Contact us")
         }
         else {
@@ -69,12 +24,10 @@ for (let i = 0; i < currencyButtons.length; i++) {
         }
     })
 }
-
 var timeButtons = document.querySelectorAll(".V1tGj-8vrk");
-
 for (let i = 0; i < timeButtons.length; i++) {
     timeButtons[i].addEventListener("click", function () {
-        if(this.innerText=='🔒\n30 min'||this.innerText=='🔒\n23 h'){
+        if (timeButtons[i].classList.contains("locked-button")) {
             window.alert("Contact us")
         }
         else{
@@ -89,10 +42,6 @@ for (let i = 0; i < timeButtons.length; i++) {
                 document.querySelector("button.play").innerHTML = "Start"
                 document.querySelector("button.play").classList.remove("selected")
             }
-            // let selectedButton = document.querySelectorAll("button.selected")
-            // for (let j = 0; j < selectedButton.length; j++) {
-            //     selectedButton[j].classList.remove("selected")
-            // }
         }
     })
 }
@@ -108,9 +57,12 @@ document.querySelector("button.play").addEventListener("click", function () {
             if (randomValue == 0) {
 
                 document.getElementsByClassName("rate")[0].innerHTML = "Up";
+                document.querySelector(".tntCount").style.background="#6aff41"
             }
             else {
                 document.getElementsByClassName("rate")[0].innerHTML = "Down";
+                document.querySelector(".tntCount").style.background="#af2121"
+
 
             }
             this.classList.add("selected")
