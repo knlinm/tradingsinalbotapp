@@ -1,5 +1,5 @@
 document.querySelector(".social").addEventListener("click", function () {
-    window.location.href = "https://t.me/aksoyofficial";
+    window.location.href = "https://t.me/burakozkanresmi";
 })
 var currencyButtons = document.querySelectorAll(".currencies .button");
 for (let i = 0; i < currencyButtons.length; i++) {
